@@ -17,14 +17,17 @@ public class StudentPage {
 	  //计算总页数
 	  totalpage=(totalrecord%pagesize==0)?totalrecord/pagesize:totalrecord/pagesize+1;
 	  //pageno的边界处理
-	  if(pageno<=1)
-	   this.pageno=1;
-	  else if(pageno>=totalpage)
-	   this.pageno=totalpage;
-	  else
+	  if(pageno<=1){
+	      this.pageno=1;
+	   }
+	  else if(pageno>=totalpage){
+	      this.pageno=totalpage;
+	      }
+	  else{
 	   this.pageno=pageno;
+	   }
 	  //计算每页开始索引，即每页第一个数据的索引，用于分页查询
-	  pagenostart=(this.pageno-1)*pagesize;
+	  pagenostart=(this.pageno-1)*pagesize+1;
 	 }
 	 public int getPagenostart() {
 	  return pagenostart;

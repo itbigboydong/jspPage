@@ -11,10 +11,10 @@ public class JDBCUtil {
 	private static String username = "orcl";
 	private static String password = "orcl";
 	static {
-		try {
+		try { 
 			Class.forName("oracle.jdbc.OracleDriver");
 		} catch (Exception e) {
-			e.printStackTrace();
+			 e.printStackTrace();
 		}
 	}
 
